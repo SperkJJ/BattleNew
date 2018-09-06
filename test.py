@@ -212,11 +212,12 @@ def run_game():
                 observation = observation_
             #eml.update_player_pos(player_pos)
             eml.next(list(map(lambda x: (x[0], x[1]), moves)))
+        if step > 1500000:
+            break
 
 
 if __name__ == "__main__":
     RL = PolicyGradient(n_actions=9, n_features=144 * 3 * 4 + 8, learning_rate=1e-4)
     run_game()
 
-    
 
