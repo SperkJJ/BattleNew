@@ -201,5 +201,3 @@ class PolicyGradient:
             discounted_ep_rs -= np.mean(discounted_ep_rs)
             discounted_ep_rs /= np.std(discounted_ep_rs)
         return discounted_ep_rs
-
-
